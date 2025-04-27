@@ -31,6 +31,216 @@
         </section>
 
         <section class="tutorial-section">
+            <h2>Compatible AI Models</h2>
+            <p>Cursor supports a wide range of AI models from various providers. Here's a comprehensive list of compatible models:</p>
+            
+            <div class="models-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Provider</th>
+                            <th>Features/Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Anthropic Models -->
+                        <tr class="model-category">
+                            <td colspan="3"><strong>Anthropic Claude Models</strong></td>
+                        </tr>
+                        <tr>
+                            <td>claude-3-5-sonnet-20241022</td>
+                            <td>Anthropic</td>
+                            <td>Latest Claude 3.5 Sonnet model with specific version</td>
+                        </tr>
+                        <tr>
+                            <td>claude-3-opus</td>
+                            <td>Anthropic</td>
+                            <td>Most powerful Claude model, excellent for complex coding tasks</td>
+                        </tr>
+                        <tr>
+                            <td>claude-3-5-haiku</td>
+                            <td>Anthropic</td>
+                            <td>Fastest Claude model, good for simple coding tasks</td>
+                        </tr>
+                        <tr>
+                            <td>claude-3-5-sonnet</td>
+                            <td>Anthropic</td>
+                            <td>Balanced performance and speed for daily coding</td>
+                        </tr>
+                        <tr>
+                            <td>claude-3-7-sonnet</td>
+                            <td>Anthropic</td>
+                            <td>Latest Claude 3.7 model with improved coding capabilities</td>
+                        </tr>
+                        <tr>
+                            <td>claude-3-7-sonnet-max</td>
+                            <td>Anthropic</td>
+                            <td>Claude 3.7 with extended context window</td>
+                        </tr>
+                        
+                        <!-- Google Models -->
+                        <tr class="model-category">
+                            <td colspan="3"><strong>Google Gemini Models</strong></td>
+                        </tr>
+                        <tr>
+                            <td>gemini-2-0-flash</td>
+                            <td>Google</td>
+                            <td>Fast response times with good code understanding</td>
+                        </tr>
+                        <tr>
+                            <td>gemini-2-0-flash-exp</td>
+                            <td>Google</td>
+                            <td>Experimental flash model with additional features</td>
+                        </tr>
+                        <tr>
+                            <td>gemini-2-0-pro-exp</td>
+                            <td>Google</td>
+                            <td>Experimental professional model with enhanced capabilities</td>
+                        </tr>
+                        <tr>
+                            <td>gemini-2-5-flash-preview-04-17</td>
+                            <td>Google</td>
+                            <td>Preview version of next-gen flash model</td>
+                        </tr>
+                        <tr>
+                            <td>gemini-2-5-pro-exp-03-25</td>
+                            <td>Google</td>
+                            <td>Experimental pro model with specific version</td>
+                        </tr>
+                        <tr>
+                            <td>gemini-2-5-pro-max</td>
+                            <td>Google</td>
+                            <td>Maximum context window and capabilities</td>
+                        </tr>
+                        <tr>
+                            <td>gemini-exp-1206</td>
+                            <td>Google</td>
+                            <td>Experimental model with specific version</td>
+                        </tr>
+                        
+                        <!-- OpenAI Models -->
+                        <tr class="model-category">
+                            <td colspan="3"><strong>OpenAI GPT Models</strong></td>
+                        </tr>
+                        <tr>
+                            <td>gpt-4</td>
+                            <td>OpenAI</td>
+                            <td>Powerful language model with strong coding abilities</td>
+                        </tr>
+                        <tr>
+                            <td>gpt-4.1</td>
+                            <td>OpenAI</td>
+                            <td>Updated GPT-4 with incremental improvements</td>
+                        </tr>
+                        <tr>
+                            <td>gpt-4.5-preview</td>
+                            <td>OpenAI</td>
+                            <td>Preview of next generation GPT-4.5</td>
+                        </tr>
+                        <tr>
+                            <td>gpt-4o</td>
+                            <td>OpenAI</td>
+                            <td>Latest "Omni" model, optimized for coding</td>
+                        </tr>
+                        <tr>
+                            <td>gpt-4o-mini</td>
+                            <td>OpenAI</td>
+                            <td>Smaller, faster version of GPT-4o</td>
+                        </tr>
+                        
+                        <!-- Anthropic API Alternative -->
+                        <tr class="model-category">
+                            <td colspan="3"><strong>Alternative API Models</strong></td>
+                        </tr>
+                        <tr>
+                            <td>o1</td>
+                            <td>Anthropic</td>
+                            <td>Alternative API for Claude</td>
+                        </tr>
+                        <tr>
+                            <td>o1-mini</td>
+                            <td>Anthropic</td>
+                            <td>Smaller alternative API for Claude</td>
+                        </tr>
+                        <tr>
+                            <td>o1-preview</td>
+                            <td>Anthropic</td>
+                            <td>Preview of newer alternative API</td>
+                        </tr>
+                        <tr>
+                            <td>o3</td>
+                            <td>Anthropic</td>
+                            <td>Latest alternative API version</td>
+                        </tr>
+                        <tr>
+                            <td>o3-mini</td>
+                            <td>Anthropic</td>
+                            <td>Smaller version of the latest API</td>
+                        </tr>
+                        <tr>
+                            <td>o4-mini</td>
+                            <td>Anthropic</td>
+                            <td>Next-gen mini model via alternative API</td>
+                        </tr>
+                        
+                        <!-- Other Models -->
+                        <tr class="model-category">
+                            <td colspan="3"><strong>Additional Models</strong></td>
+                        </tr>
+                        <tr>
+                            <td>cursor-small</td>
+                            <td>Cursor</td>
+                            <td>Lightweight model developed by Cursor</td>
+                        </tr>
+                        <tr>
+                            <td>deepseek-r1</td>
+                            <td>DeepSeek</td>
+                            <td>Specialized coding model from DeepSeek</td>
+                        </tr>
+                        <tr>
+                            <td>deepseek-v3</td>
+                            <td>DeepSeek</td>
+                            <td>Updated DeepSeek model</td>
+                        </tr>
+                        <tr>
+                            <td>deepseek-v3.1</td>
+                            <td>DeepSeek</td>
+                            <td>Latest increment of DeepSeek model</td>
+                        </tr>
+                        <tr>
+                            <td>grok-3-beta</td>
+                            <td>xAI</td>
+                            <td>Beta version of Grok AI model</td>
+                        </tr>
+                        <tr>
+                            <td>grok-3-mini-beta</td>
+                            <td>xAI</td>
+                            <td>Lightweight version of Grok AI model</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <p class="model-note">Note: Model availability may change as providers update their offerings. You can add custom model names in Cursor's settings.</p>
+        </section>
+
+        <section class="tutorial-section">
+            <h2>Setting Up Your Preferred Model</h2>
+            <p>To configure which AI model Cursor uses:</p>
+            <ol>
+                <li>Click on the settings icon in the bottom left corner</li>
+                <li>Select "AI" from the settings menu</li>
+                <li>Choose your preferred model from the dropdown</li>
+                <li>Enter any required API keys for the selected provider</li>
+            </ol>
+            <div class="tip-box">
+                <h4>Pro Tip</h4>
+                <p>You can switch between models based on your tasks. Use faster models like GPT-3.5 or Claude Haiku for simple completions, and more powerful models like GPT-4 or Claude Opus for complex problems.</p>
+            </div>
+        </section>
+
+        <section class="tutorial-section">
             <h2>Key Features</h2>
             <div class="feature-grid">
                 <div class="feature-card">
