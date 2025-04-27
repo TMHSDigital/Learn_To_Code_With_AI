@@ -7,50 +7,118 @@
     <link rel="stylesheet" href="../../styles/main.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="../../index.html">Home</a>
-            <a href="../cursor/">Cursor</a>
-            <a href="../claude/">Claude</a>
-            <a href="../../playground/">Playground</a>
+    <header class="site-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1><a href="../../index.html">Learn To Code With AI</a></h1>
+            </div>
+            <div class="main-nav">
+                <a href="../../index.html">Home</a>
+                <a href="../cursor/">Cursor</a>
+                <a href="../chatgpt/" class="active">ChatGPT</a>
+                <a href="../claude/">Claude</a>
+                <a href="../../playground/">Playground</a>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
         </nav>
     </header>
 
-    <main class="tutorial-content">
-        <h1>ChatGPT Tutorial</h1>
-        <p>Learn how to use ChatGPT for code explanation and problem-solving.</p>
+    <main class="main-content">
+        <div class="hero">
+            <h2>ChatGPT Tutorial</h2>
+            <p>Learn how to use ChatGPT for code explanation and problem-solving.</p>
+        </div>
         
-        <section class="tutorial-section">
-            <h2>Getting Started with ChatGPT</h2>
-            <p>ChatGPT is a powerful AI language model that can help you understand and write code.</p>
-            <ul>
-                <li>Sign up at <a href="https://chat.openai.com">chat.openai.com</a></li>
-                <li>Learn effective prompting techniques</li>
-                <li>Start asking coding questions</li>
-            </ul>
+        <section class="tutorial-section content-section">
+            <h3>Getting Started with ChatGPT</h3>
+            <div class="tutorial-content">
+                <p>ChatGPT is a powerful AI language model that can help you understand and write code.</p>
+                <ul class="feature-list">
+                    <li>Sign up at <a href="https://chat.openai.com" class="link-highlight">chat.openai.com</a></li>
+                    <li>Learn effective prompting techniques</li>
+                    <li>Start asking coding questions</li>
+                </ul>
+            </div>
         </section>
 
-        <section class="tutorial-section">
-            <h2>Key Features</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h3>Code Explanation</h3>
-                    <p>Get detailed explanations of complex code.</p>
+        <section class="tutorial-section content-section">
+            <h3>Key Features</h3>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h4>Code Explanation</h4>
+                    <p>Ask ChatGPT to analyze and explain complex code snippets in simple language, helping you understand unfamiliar code or libraries.</p>
+                    <div class="card-example">
+                        <p class="example-prompt">"Explain what this JavaScript function does:"</p>
+                        <pre><code>function debounce(func, wait) {
+  let timeout;
+  return function(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+}</code></pre>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <h3>Problem Solving</h3>
-                    <p>Get help debugging and solving coding challenges.</p>
+                
+                <div class="tool-card">
+                    <h4>Problem Solving</h4>
+                    <p>Get assistance debugging code issues, optimizing algorithms, or finding alternative approaches to coding problems.</p>
+                    <div class="card-example">
+                        <p class="example-prompt">"My React component re-renders too often. How can I fix it?"</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <h3>Best Practices</h3>
-                    <p>Learn coding best practices and patterns.</p>
+                
+                <div class="tool-card">
+                    <h4>Best Practices</h4>
+                    <p>Learn programming best practices, coding standards, and patterns for writing cleaner, more maintainable code.</p>
+                    <div class="card-example">
+                        <p class="example-prompt">"What are the best practices for error handling in async JavaScript?"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tutorial-section content-section">
+            <h3>Effective Prompting Techniques</h3>
+            <div class="tutorial-content">
+                <p>To get the most out of ChatGPT for coding, use these prompting strategies:</p>
+                
+                <div class="tip-box">
+                    <h4>Be Specific</h4>
+                    <p>Include language, framework, and version information in your queries.</p>
+                    <p class="example-prompt">❌ "How do I create a button?"</p>
+                    <p class="example-prompt">✅ "How do I create a styled button in React with TypeScript?"</p>
+                </div>
+                
+                <div class="tip-box">
+                    <h4>Provide Context</h4>
+                    <p>Include relevant code snippets and explain what you're trying to accomplish.</p>
+                    <p class="example-prompt">❌ "My code doesn't work."</p>
+                    <p class="example-prompt">✅ "I'm trying to fetch data from an API in React, but I'm getting this error: [error message]. Here's my component code: [code snippet]"</p>
+                </div>
+                
+                <div class="tip-box">
+                    <h4>Ask for Explanations</h4>
+                    <p>Request explanations along with solutions to understand the concepts better.</p>
+                    <p class="example-prompt">❌ "Write a React component for a todo list."</p>
+                    <p class="example-prompt">✅ "Write a React component for a todo list and explain the key parts of the implementation."</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 TMHSDigital. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 TMHSDigital. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/TMHSDigital/Learn_To_Code_With_AI">GitHub</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+        </div>
     </footer>
+
+    <script src="../../scripts/main.js"></script>
 </body>
 </html> 

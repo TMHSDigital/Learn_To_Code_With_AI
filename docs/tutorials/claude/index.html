@@ -7,50 +7,134 @@
     <link rel="stylesheet" href="../../styles/main.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="../../index.html">Home</a>
-            <a href="../cursor/">Cursor</a>
-            <a href="../chatgpt/">ChatGPT</a>
-            <a href="../../playground/">Playground</a>
+    <header class="site-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1><a href="../../index.html">Learn To Code With AI</a></h1>
+            </div>
+            <div class="main-nav">
+                <a href="../../index.html">Home</a>
+                <a href="../cursor/">Cursor</a>
+                <a href="../chatgpt/">ChatGPT</a>
+                <a href="../claude/" class="active">Claude</a>
+                <a href="../../playground/">Playground</a>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
         </nav>
     </header>
 
-    <main class="tutorial-content">
-        <h1>Claude Tutorial</h1>
-        <p>Learn how to use Claude for advanced code analysis and optimization.</p>
+    <main class="main-content">
+        <div class="hero">
+            <h2>Claude Tutorial</h2>
+            <p>Learn how to use Claude for advanced code analysis and optimization.</p>
+        </div>
         
-        <section class="tutorial-section">
-            <h2>Getting Started with Claude</h2>
-            <p>Claude is an AI assistant that excels at technical analysis and documentation.</p>
-            <ul>
-                <li>Access Claude through <a href="https://claude.ai">claude.ai</a></li>
-                <li>Learn to write effective prompts</li>
-                <li>Start getting technical assistance</li>
-            </ul>
+        <section class="tutorial-section content-section">
+            <h3>Getting Started with Claude</h3>
+            <div class="tutorial-content">
+                <p>Claude is an AI assistant from Anthropic that excels at technical analysis, documentation, and understanding complex code. With its nuanced reasoning capabilities, Claude can help with a variety of coding tasks.</p>
+                <ul class="feature-list">
+                    <li>Access Claude through <a href="https://claude.ai" class="link-highlight">claude.ai</a> for free usage</li>
+                    <li>Sign up for Claude Pro to get increased message limits and faster responses</li>
+                    <li>Use Claude's API for integration into your own applications</li>
+                    <li>Learn to write effective prompts that leverage Claude's technical abilities</li>
+                </ul>
+            </div>
         </section>
 
-        <section class="tutorial-section">
-            <h2>Key Features</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h3>Advanced Analysis</h3>
-                    <p>Get deep insights into your code structure.</p>
+        <section class="tutorial-section content-section">
+            <h3>Key Features</h3>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h4>Advanced Analysis</h4>
+                    <p>Claude excels at analyzing complex code structures, identifying patterns, and explaining architectural decisions in detail.</p>
+                    <div class="card-example">
+                        <p class="example-prompt">"Analyze this React component and identify potential performance issues:"</p>
+                        <pre><code>function UserList({ users, fetchUsers }) {
+  useEffect(() => {
+    fetchUsers();
+  });
+  
+  return (
+    <div>
+      {users.map(user => (
+        <div key={user.id}>{user.name}</div>
+      ))}
+    </div>
+  );
+}</code></pre>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <h3>Technical Documentation</h3>
-                    <p>Generate comprehensive documentation.</p>
+                
+                <div class="tool-card">
+                    <h4>Technical Documentation</h4>
+                    <p>Generate comprehensive documentation for your code, APIs, and projects with Claude's understanding of technical writing best practices.</p>
+                    <div class="card-example">
+                        <p class="example-prompt">"Write thorough JSDoc comments for this function:"</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <h3>Code Optimization</h3>
-                    <p>Improve performance and efficiency.</p>
+                
+                <div class="tool-card">
+                    <h4>Code Optimization</h4>
+                    <p>Get suggestions for optimizing your code for performance, readability, and maintainability from Claude's in-depth analysis.</p>
+                    <div class="card-example">
+                        <p class="example-prompt">"Optimize this database query for better performance:"</p>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="tutorial-section content-section">
+            <h3>Unique Capabilities</h3>
+            <div class="tutorial-content">
+                <p>Claude has several advantages that make it particularly useful for certain programming tasks:</p>
+                
+                <div class="tip-box">
+                    <h4>Long Context Windows</h4>
+                    <p>Claude can process up to 200,000 tokens in a single conversation, allowing you to analyze large files or entire codebases at once.</p>
+                </div>
+                
+                <div class="tip-box">
+                    <h4>Programming Language Support</h4>
+                    <p>Claude understands a wide range of programming languages including Python, JavaScript, Java, C++, Rust, Go, and many more.</p>
+                </div>
+                
+                <div class="tip-box">
+                    <h4>Nuanced Understanding</h4>
+                    <p>Claude can understand subtle distinctions between similar coding patterns and provide context-aware recommendations.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="tutorial-section content-section">
+            <h3>Effective Prompting for Coding</h3>
+            <div class="tutorial-content">
+                <p>To get the best results when using Claude for coding tasks:</p>
+                
+                <ul class="feature-list">
+                    <li><strong>Be specific about your programming language and environment</strong> - Tell Claude what versions you're using and any relevant libraries</li>
+                    <li><strong>Provide context</strong> - Explain the purpose of your code and what you're trying to achieve</li>
+                    <li><strong>Ask for explanations</strong> - Request that Claude explains its reasoning when analyzing or generating code</li>
+                    <li><strong>Use multiple examples</strong> - When teaching Claude a pattern, provide multiple examples to ensure it understands</li>
+                    <li><strong>Break down complex problems</strong> - For complex tasks, break them into smaller steps and work through them with Claude</li>
+                </ul>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 TMHSDigital. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 TMHSDigital. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/TMHSDigital/Learn_To_Code_With_AI">GitHub</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+        </div>
     </footer>
+
+    <script src="../../scripts/main.js"></script>
 </body>
 </html> 
