@@ -283,6 +283,82 @@
                 </div>
             </div>
         </section>
+
+        <section class="tutorial-section content-section">
+            <h3>System Prompts in Cursor</h3>
+            <div class="tutorial-content">
+                <p>System prompts are instructions that guide how AI models behave when assisting with your code. In Cursor, you can customize system prompts to:
+                </p>
+                <ul class="feature-list">
+                    <li>Make AI follow specific coding standards</li>
+                    <li>Specify preferred frameworks or libraries</li>
+                    <li>Set boundaries for AI responses</li>
+                    <li>Include project-specific context</li>
+                </ul>
+                <div class="tip-box">
+                    <h4>Pro Tip</h4>
+                    <p>A well-crafted system prompt can dramatically improve the quality and relevance of AI assistance. Be specific about your coding style, error handling preferences, and documentation requirements.</p>
+                </div>
+                <p>To set a custom system prompt in Cursor:</p>
+                <ol class="feature-list">
+                    <li>Click on the settings icon in the bottom left corner</li>
+                    <li>Select "AI" from the settings menu</li>
+                    <li>Scroll to the "System Prompt" section</li>
+                    <li>Edit the default prompt or add your custom instructions</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="tutorial-section content-section">
+            <h3>Using .cursorrules Files</h3>
+            <div class="tutorial-content">
+                <p>A <code>.cursorrules</code> file is a powerful way to configure AI behavior for specific projects or repositories in Cursor. This file allows you to define project-specific AI settings that will be applied automatically when working within that project.</p>
+                
+                <h4>Creating a .cursorrules File</h4>
+                <p>To create a .cursorrules file:</p>
+                <ol class="feature-list">
+                    <li>Create a new file named <code>.cursorrules</code> in your project root directory</li>
+                    <li>Format the file using JSON syntax</li>
+                    <li>Define your custom rules and settings</li>
+                </ol>
+                
+                <h4>Example .cursorrules File</h4>
+                <div class="code-example">
+<pre><code>{
+  <span class="property">"systemPrompt"</span>: <span class="string">"You are a helpful assistant that specializes in this project. Follow these guidelines:
+- Use TypeScript for all new code
+- Follow the repository's existing code style
+- Use React functional components with hooks
+- Document all functions with JSDoc comments"</span>,
+  <span class="property">"defaultModel"</span>: <span class="string">"claude-3-opus"</span>,
+  <span class="property">"excludeFromContext"</span>: [
+    <span class="string">"node_modules/**"</span>,
+    <span class="string">"build/**"</span>,
+    <span class="string">"*.log"</span>
+  ],
+  <span class="property">"includeInContext"</span>: [
+    <span class="string">"src/**/*.ts"</span>,
+    <span class="string">"src/**/*.tsx"</span>
+  ]
+}</code></pre>
+                </div>
+                
+                <h4>Key Configuration Options</h4>
+                <ul class="feature-list">
+                    <li><strong>systemPrompt</strong>: Custom instructions for the AI when working in this project</li>
+                    <li><strong>defaultModel</strong>: The preferred AI model to use for this project</li>
+                    <li><strong>excludeFromContext</strong>: File patterns to exclude from AI context</li>
+                    <li><strong>includeInContext</strong>: File patterns to prioritize in AI context</li>
+                    <li><strong>aiCommand</strong>: Custom slash command configuration</li>
+                    <li><strong>autoComplete</strong>: Settings for auto-completion behavior</li>
+                </ul>
+                
+                <div class="tip-box">
+                    <h4>Pro Tip</h4>
+                    <p>Use .cursorrules files to standardize AI behavior across your team. This ensures all developers receive consistent AI assistance that aligns with project requirements and coding standards.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">

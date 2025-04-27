@@ -498,10 +498,24 @@ body[data-theme="dark"] .card-example {
     border-radius: 8px;
     overflow-x: auto;
     margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 0.95rem;
 }
 
 .code-example code {
     font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+.code-example code .property {
+    color: #9cdcfe;
+}
+
+.code-example code .string {
+    color: #ce9178;
+}
+
+.code-example code .comment {
+    color: #6a9955;
 }
 
 .code-example p {
