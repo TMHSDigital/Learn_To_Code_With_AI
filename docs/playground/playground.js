@@ -1,13 +1,37 @@
 // Initialize Monaco Editor
 require.config({ paths: { vs: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.36.1/min/vs' }});
 require(['vs/editor/editor.main'], function() {
+    // Check if dark mode is active
+    const isDarkMode = document.body.getAttribute('data-theme') === 'dark';
+    const editorTheme = isDarkMode ? 'vs-dark' : 'vs';
+    
     const editor = monaco.editor.create(document.getElementById('editor'), {
         value: '// Write your code here\n',
         language: 'javascript',
-        theme: 'vs-dark',
+        theme: editorTheme,
         automaticLayout: true,
-        minimap: { enabled: false }
+        minimap: { enabled: false },
+        scrollBeyondLastLine: false,
+        fontSize: 14,
+        lineNumbers: 'on',
+        roundedSelection: true,
+        scrollbar: {
+            vertical: 'visible',
+            horizontalScrollbarSize: 8,
+            verticalScrollbarSize: 8
+        }
     });
+
+    // Handle theme changes
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            setTimeout(() => {
+                const newIsDarkMode = document.body.getAttribute('data-theme') === 'dark';
+                monaco.editor.setTheme(newIsDarkMode ? 'vs-dark' : 'vs');
+            }, 100);
+        });
+    }
 
     // Initialize AI Service
     const aiService = new AIService();
@@ -65,9 +89,20 @@ const sendButton = document.getElementById('send-message');
 function addMessage(sender, message) {
     const messageDiv = document.createElement('div');
     messageDiv.className = `message ${sender.toLowerCase()}`;
+    
+    // Format code blocks in messages
+    let formattedMessage = message;
+    
+    // Check if message contains code blocks with ```
+    if (message.includes('```')) {
+        formattedMessage = message.replace(/```([\s\S]*?)```/g, (match, code) => {
+            return `<pre><code>${code.trim()}</code></pre>`;
+        });
+    }
+    
     messageDiv.innerHTML = `
         <strong>${sender}:</strong>
-        <p>${message}</p>
+        <p>${formattedMessage}</p>
     `;
     chatMessages.appendChild(messageDiv);
     chatMessages.scrollTop = chatMessages.scrollHeight;
