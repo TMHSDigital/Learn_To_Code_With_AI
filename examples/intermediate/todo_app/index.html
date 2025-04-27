@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Assisted Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Todo List</h1>
+            <div class="theme-toggle">
+                <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
+        </header>
+        
+        <main>
+            <div class="add-todo">
+                <input type="text" id="todoInput" placeholder="What needs to be done?">
+                <button id="addTodo">Add</button>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <div class="todo-list" id="todoList">
+                <!-- Todo items will be inserted here -->
+            </div>
+
+            <div class="todo-stats">
+                <span id="todoCount">0 items left</span>
+                <button id="clearCompleted">Clear completed</button>
+            </div>
+        </main>
+    </div>
+
+    <template id="todoItemTemplate">
+        <div class="todo-item">
+            <input type="checkbox" class="todo-checkbox">
+            <span class="todo-text"></span>
+            <button class="delete-todo">×</button>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html> 

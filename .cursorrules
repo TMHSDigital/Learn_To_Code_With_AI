@@ -1,9 +1,9 @@
 - Ensure that this project is safe for the public GitHub Repository. This means that the gitignore needs to be up to date at all times, and any files that are committed MUST NOT include any sensitive information. 
-- The site will be hosted from the main branch with GitHub pages. 
+- The site will be hosted from the ./docs directory in the main branch with GitHub pages. 
 - Do NOT use NPM
 - Use vanilla javascript, html, and css 
 - The username of the account is TMHSDigital
-- Ensure documention is up to date
+- Ensure documention comprehensive and always checked to ensure it is up to date with the most recent updates
 - Make the README.md robust using github flavored markdown
 - Use badges or other cool elements in the README.md 
 - Do NOT use emojis or emoticons in the README.md, ensure it looks professional 
