@@ -134,6 +134,25 @@
     background: #dee2e6;
 }
 
+.api-key-input {
+    padding: 0.5rem;
+    border: 1px solid #3d3d3d;
+    border-radius: 4px;
+    background: #2d2d2d;
+    color: #fff;
+    width: 200px;
+    margin-right: 1rem;
+}
+
+.api-key-input::placeholder {
+    color: #888;
+}
+
+.api-key-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
 @media (max-width: 768px) {
     .playground-content {
         grid-template-columns: 1fr;
