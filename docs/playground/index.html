@@ -9,66 +9,99 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.36.1/min/vs/loader.min.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../about/index.html">About</a>
-            <a href="index.html" class="active">Playground</a>
+    <header class="site-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1><a href="../index.html">Learn To Code With AI</a></h1>
+            </div>
+            <div class="main-nav">
+                <a href="../index.html">Home</a>
+                <a href="../tutorials/cursor/">Cursor</a>
+                <a href="../tutorials/chatgpt/">ChatGPT</a>
+                <a href="../tutorials/claude/">Claude</a>
+                <a href="../playground/" class="active">Playground</a>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
         </nav>
     </header>
 
-    <main class="playground-container">
-        <div class="playground-header">
-            <h1>AI Code Playground</h1>
+    <main class="main-content">
+        <div class="hero">
+            <h2>AI Code Playground</h2>
             <p>Try out AI coding tools in real-time. Write code, get suggestions, and learn!</p>
         </div>
 
-        <div class="playground-content">
-            <div class="editor-section">
-                <div class="editor-toolbar">
-                    <select id="language-select" aria-label="Select programming language">
-                        <option value="javascript">JavaScript</option>
-                        <option value="python">Python</option>
-                        <option value="html">HTML</option>
-                        <option value="css">CSS</option>
-                    </select>
-                    <button id="run-code">Run Code</button>
-                    <button id="clear-code">Clear</button>
+        <section class="content-section">
+            <div class="playground-content">
+                <div class="editor-section">
+                    <div class="editor-toolbar">
+                        <select id="language-select" aria-label="Select programming language">
+                            <option value="javascript">JavaScript</option>
+                            <option value="python">Python</option>
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                        </select>
+                        <button id="run-code" class="button">Run Code</button>
+                        <button id="clear-code" class="button">Clear</button>
+                    </div>
+                    <div id="editor"></div>
                 </div>
-                <div id="editor"></div>
-            </div>
 
-            <div class="ai-panel">
-                <div class="ai-header">
-                    <h2>AI Assistant</h2>
-                    <select id="ai-model" aria-label="Select AI model">
-                        <option value="cursor">Cursor</option>
-                        <option value="chatgpt">ChatGPT</option>
-                        <option value="claude">Claude</option>
-                    </select>
-                </div>
-                <div class="ai-chat">
-                    <div id="chat-messages"></div>
-                    <div class="chat-input">
-                        <textarea id="user-input" placeholder="Ask the AI for help..."></textarea>
-                        <button id="send-message">Send</button>
+                <div class="ai-panel">
+                    <div class="ai-header">
+                        <h3>AI Assistant</h3>
+                        <select id="ai-model" aria-label="Select AI model">
+                            <option value="cursor">Cursor</option>
+                            <option value="chatgpt">ChatGPT</option>
+                            <option value="claude">Claude</option>
+                        </select>
+                    </div>
+                    <div class="ai-chat">
+                        <div id="chat-messages"></div>
+                        <div class="chat-input">
+                            <textarea id="user-input" placeholder="Ask the AI for help..."></textarea>
+                            <button id="send-message" class="button">Send</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="playground-footer">
-            <div class="example-prompts">
-                <h3>Try these prompts:</h3>
-                <ul>
-                    <li>"Explain this code"</li>
-                    <li>"How can I improve this?"</li>
-                    <li>"Find bugs in this code"</li>
-                    <li>"Suggest optimizations"</li>
-                </ul>
+        <section class="content-section">
+            <h3>Example Prompts</h3>
+            <div class="tutorial-content">
+                <p>Try these prompts to see how the AI can help with your code:</p>
+                <div class="example-prompts">
+                    <ul class="feature-list">
+                        <li class="example-prompt">"Explain this code"</li>
+                        <li class="example-prompt">"How can I improve this?"</li>
+                        <li class="example-prompt">"Find bugs in this code"</li>
+                        <li class="example-prompt">"Suggest optimizations"</li>
+                        <li class="example-prompt">"Convert this to TypeScript"</li>
+                        <li class="example-prompt">"Add error handling to this function"</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box">
+                    <h4>API Key Required</h4>
+                    <p>This playground uses the OpenAI API. You'll need to provide your own API key in the text field above the editor. Your key is stored only in your browser's local storage and is never sent to our servers.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 TMHSDigital. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/TMHSDigital/Learn_To_Code_With_AI">GitHub</a>
+                <a href="../about/">About</a>
+                <a href="../contact/">Contact</a>
             </div>
         </div>
-    </main>
+    </footer>
 
     <script src="../scripts/main.js"></script>
     <script src="../scripts/ai-service.js"></script>
