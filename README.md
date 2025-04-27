@@ -4,6 +4,10 @@
 [![GitHub stars](https://img.shields.io/github/stars/TMHSDigital/Learn_To_Code_With_AI)](https://github.com/TMHSDigital/Learn_To_Code_With_AI/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/TMHSDigital/Learn_To_Code_With_AI)](https://github.com/TMHSDigital/Learn_To_Code_With_AI/network)
 [![GitHub issues](https://img.shields.io/github/issues/TMHSDigital/Learn_To_Code_With_AI)](https://github.com/TMHSDigital/Learn_To_Code_With_AI/issues)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Ftmhsdigital.github.io%2FLearn_To_Code_With_AI)](https://tmhsdigital.github.io/Learn_To_Code_With_AI)
+[![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://tmhsdigital.github.io/Learn_To_Code_With_AI/docs)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/TMHSDigital/Learn_To_Code_With_AI/graphs/commit-activity)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/TMHSDigital/Learn_To_Code_With_AI/blob/main/CONTRIBUTING.md)
 
 Welcome to the "Learn To Code With AI" repository! This educational resource is designed to help developers harness the power of AI tools to enhance their coding journey. Whether you're a beginner or an experienced developer, this guide will show you how to leverage AI to write better code, debug more effectively, and learn programming concepts faster.
 
