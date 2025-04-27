@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Challenges - Learn To Code With AI</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="../../tutorials/cursor/">Cursor</a>
+            <a href="../../tutorials/chatgpt/">ChatGPT</a>
+            <a href="../../tutorials/claude/">Claude</a>
+            <a href="../../playground/">Playground</a>
+        </nav>
+    </header>
+
+    <main class="tutorial-content">
+        <h1>Advanced Challenges</h1>
+        <p>Master sophisticated coding techniques and system design with AI assistance.</p>
+        
+        <section class="tutorial-section">
+            <h2>Data Visualization Dashboard</h2>
+            <p>Create a dynamic data visualization dashboard with AI guidance.</p>
+            
+            <div class="code-example">
+                <h3>HTML Structure</h3>
+                <pre><code>&lt;!-- Ask AI: "Create HTML structure for a data visualization dashboard" --&gt;
+&lt;div class="dashboard"&gt;
+    &lt;header class="dashboard-header"&gt;
+        &lt;h1&gt;Data Analytics Dashboard&lt;/h1&gt;
+        &lt;div class="controls"&gt;
+            &lt;select id="dataSource"&gt;
+                &lt;option value="sales"&gt;Sales Data&lt;/option&gt;
+                &lt;option value="traffic"&gt;Website Traffic&lt;/option&gt;
+                &lt;option value="users"&gt;User Growth&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;button id="refreshData"&gt;Refresh Data&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+    
+    &lt;div class="dashboard-grid"&gt;
+        &lt;div class="card" id="chartArea1"&gt;
+            &lt;h3&gt;Trend Analysis&lt;/h3&gt;
+            &lt;div class="chart-container"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="card" id="chartArea2"&gt;
+            &lt;h3&gt;Distribution&lt;/h3&gt;
+            &lt;div class="chart-container"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="card" id="statsArea"&gt;
+            &lt;h3&gt;Key Statistics&lt;/h3&gt;
+            &lt;div class="stats-container"&gt;
+                &lt;div class="stat-item"&gt;
+                    &lt;span class="stat-label"&gt;Total&lt;/span&gt;
+                    &lt;span class="stat-value" id="statTotal"&gt;0&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="stat-item"&gt;
+                    &lt;span class="stat-label"&gt;Average&lt;/span&gt;
+                    &lt;span class="stat-value" id="statAvg"&gt;0&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="stat-item"&gt;
+                    &lt;span class="stat-label"&gt;Growth&lt;/span&gt;
+                    &lt;span class="stat-value" id="statGrowth"&gt;0%&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="card" id="dataTable"&gt;
+            &lt;h3&gt;Raw Data&lt;/h3&gt;
+            &lt;div class="table-container"&gt;
+                &lt;table&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Date&lt;/th&gt;
+                            &lt;th&gt;Value&lt;/th&gt;
+                            &lt;th&gt;Category&lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody id="tableBody"&gt;&lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            
+            <div class="code-example">
+                <h3>JavaScript Implementation (Partial)</h3>
+                <pre><code>// Ask AI: "Write JavaScript for a data dashboard that fetches and visualizes data"
+// Using Chart.js for visualization
+import Chart from 'chart.js/auto';
+
+class Dashboard {
+    constructor() {
+        this.currentDataSource = 'sales';
+        this.charts = {};
+        this.data = {};
+        
+        this.initializeEventListeners();
+        this.loadData();
+    }
+    
+    initializeEventListeners() {
+        document.getElementById('dataSource').addEventListener('change', (e) => {
+            this.currentDataSource = e.target.value;
+            this.loadData();
+        });
+        
+        document.getElementById('refreshData').addEventListener('click', () => {
+            this.loadData();
+        });
+    }
+    
+    async loadData() {
+        try {
+            const response = await fetch(`/api/data/${this.currentDataSource}`);
+            const data = await response.json();
+            
+            if (!data.success) {
+                throw new Error(data.message || 'Failed to load data');
+            }
+            
+            this.data = data.data;
+            this.updateDashboard();
+        } catch (error) {
+            console.error('Error loading data:', error);
+            alert('Failed to load data. Please try again later.');
+        }
+    }
+    
+    updateDashboard() {
+        this.updateCharts();
+        this.updateStats();
+        this.updateTable();
+    }
+    
+    updateCharts() {
+        // Trend Analysis Chart
+        this.createOrUpdateChart('chartArea1', 'line', {
+            labels: this.data.dates,
+            datasets: [{
+                label: this.getDataSourceLabel(),
+                data: this.data.values,
+                borderColor: 'rgb(75, 192, 192)',
+                tension: 0.1
+            }]
+        });
+        
+        // Distribution Chart
+        this.createOrUpdateChart('chartArea2', 'pie', {
+            labels: this.data.categories,
+            datasets: [{
+                label: 'Distribution',
+                data: this.data.categoryValues,
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)',
+                    'rgb(75, 192, 192)',
+                    'rgb(153, 102, 255)'
+                ]
+            }]
+        });
+    }
+    
+    // ... More methods for updating stats and table ...
+    
+    createOrUpdateChart(containerId, type, data) {
+        const container = document.querySelector(`#${containerId} .chart-container`);
+        
+        if (this.charts[containerId]) {
+            this.charts[containerId].destroy();
+        }
+        
+        const ctx = document.createElement('canvas');
+        container.innerHTML = '';
+        container.appendChild(ctx);
+        
+        this.charts[containerId] = new Chart(ctx, {
+            type: type,
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    }
+    
+    getDataSourceLabel() {
+        switch(this.currentDataSource) {
+            case 'sales': return 'Sales Revenue';
+            case 'traffic': return 'Website Visitors';
+            case 'users': return 'User Count';
+            default: return 'Value';
+        }
+    }
+}</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TMHSDigital. All rights reserved.</p>
+    </footer>
+
+    <script src="../../scripts/main.js"></script>
+</body>
+</html> 

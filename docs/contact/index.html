@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Learn To Code With AI</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../tutorials/cursor/">Cursor</a>
+            <a href="../tutorials/chatgpt/">ChatGPT</a>
+            <a href="../tutorials/claude/">Claude</a>
+            <a href="../playground/">Playground</a>
+        </nav>
+    </header>
+
+    <main class="about-content">
+        <h1>Contact Us</h1>
+        
+        <section class="about-section">
+            <h2>Get in Touch</h2>
+            <p>We'd love to hear from you! Whether you have questions, suggestions, or want to contribute to the project, there are several ways to reach us.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>Contact Options</h2>
+            <div class="offerings-grid">
+                <div class="offering-card">
+                    <h3>GitHub Issues</h3>
+                    <p>For bug reports, feature requests, or other project-related matters, please open an issue on our GitHub repository.</p>
+                    <a href="https://github.com/TMHSDigital/Learn_To_Code_With_AI/issues" class="button">Open an Issue</a>
+                </div>
+                
+                <div class="offering-card">
+                    <h3>Email</h3>
+                    <p>For private inquiries or other matters, you can reach us directly via email.</p>
+                    <a href="mailto:contact@tmhsdigital.com" class="button">contact@tmhsdigital.com</a>
+                </div>
+                
+                <div class="offering-card">
+                    <h3>Contribute</h3>
+                    <p>Want to contribute to the project? Check out our contribution guidelines.</p>
+                    <a href="https://github.com/TMHSDigital/Learn_To_Code_With_AI/blob/main/CONTRIBUTING.md" class="button">Contribution Guide</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2>Send a Message</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="button primary">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TMHSDigital. All rights reserved.</p>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In a real implementation, this would send the form data to a server
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html> 

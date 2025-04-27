@@ -30,19 +30,32 @@ function setupEventListeners() {
     });
 
     // Add animation class to cards when they become visible
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-            }
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, {
+            threshold: 0.1
         });
-    }, {
-        threshold: 0.1
-    });
 
-    document.querySelectorAll('.tool-card, .example-card').forEach(card => {
-        observer.observe(card);
-    });
+        document.querySelectorAll('.tool-card, .example-card, .feature-card, .offering-card').forEach(card => {
+            observer.observe(card);
+        });
+    }
+
+    // Handle contact form submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In a real implementation, this would send the form data to a server
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    }
 }
 
 function toggleTheme() {
