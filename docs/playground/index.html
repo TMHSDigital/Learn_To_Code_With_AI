@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Playground - Learn To Code With AI</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="playground.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.36.1/min/vs/loader.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../about/index.html">About</a>
+            <a href="index.html" class="active">Playground</a>
+        </nav>
+    </header>
+
+    <main class="playground-container">
+        <div class="playground-header">
+            <h1>AI Code Playground</h1>
+            <p>Try out AI coding tools in real-time. Write code, get suggestions, and learn!</p>
+        </div>
+
+        <div class="playground-content">
+            <div class="editor-section">
+                <div class="editor-toolbar">
+                    <select id="language-select" aria-label="Select programming language">
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                    </select>
+                    <button id="run-code">Run Code</button>
+                    <button id="clear-code">Clear</button>
+                </div>
+                <div id="editor"></div>
+            </div>
+
+            <div class="ai-panel">
+                <div class="ai-header">
+                    <h2>AI Assistant</h2>
+                    <select id="ai-model" aria-label="Select AI model">
+                        <option value="cursor">Cursor</option>
+                        <option value="chatgpt">ChatGPT</option>
+                        <option value="claude">Claude</option>
+                    </select>
+                </div>
+                <div class="ai-chat">
+                    <div id="chat-messages"></div>
+                    <div class="chat-input">
+                        <textarea id="user-input" placeholder="Ask the AI for help..."></textarea>
+                        <button id="send-message">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="playground-footer">
+            <div class="example-prompts">
+                <h3>Try these prompts:</h3>
+                <ul>
+                    <li>"Explain this code"</li>
+                    <li>"How can I improve this?"</li>
+                    <li>"Find bugs in this code"</li>
+                    <li>"Suggest optimizations"</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="../scripts/main.js"></script>
+    <script src="playground.js"></script>
+</body>
+</html> 
