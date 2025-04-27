@@ -1,4 +1,4 @@
-# Learn To Code With AI 🤖
+# Learn To Code With AI
 
 [![GitHub license](https://img.shields.io/github/license/TMHSDigital/Learn_To_Code_With_AI)](https://github.com/TMHSDigital/Learn_To_Code_With_AI/blob/main/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/TMHSDigital/Learn_To_Code_With_AI)](https://github.com/TMHSDigital/Learn_To_Code_With_AI/stargazers)
@@ -7,7 +7,7 @@
 
 Welcome to the "Learn To Code With AI" repository! This educational resource is designed to help developers harness the power of AI tools to enhance their coding journey. Whether you're a beginner or an experienced developer, this guide will show you how to leverage AI to write better code, debug more effectively, and learn programming concepts faster.
 
-## 🎯 What You'll Learn
+## What You'll Learn
 
 - How to use Cursor.sh for intelligent code completion and refactoring
 - Leveraging ChatGPT for code explanation and problem-solving
@@ -15,7 +15,7 @@ Welcome to the "Learn To Code With AI" repository! This educational resource is 
 - Best practices for working with AI coding tools
 - Real-world coding examples and exercises
 
-## 🛠️ Featured AI Tools
+## Featured AI Tools
 
 ### Cursor
 - Smart code completion
@@ -35,7 +35,7 @@ Welcome to the "Learn To Code With AI" repository! This educational resource is 
 - Code review and optimization
 - Complex problem-solving
 
-## 📚 Repository Structure
+## Repository Structure
 
 ```
 Learn_To_Code_With_AI/
@@ -51,7 +51,7 @@ Learn_To_Code_With_AI/
 └── resources/
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 1. Clone this repository:
    ```bash
@@ -61,14 +61,14 @@ Learn_To_Code_With_AI/
 3. Try the exercises to practice what you've learned
 4. Check the examples for real-world applications
 
-## 💡 Best Practices
+## Best Practices
 
 - Always review AI-generated code before using it
 - Understand the code instead of just copying it
 - Use AI tools as assistants, not replacements
 - Keep security in mind when sharing code with AI tools
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! If you have suggestions, bug reports, or want to contribute content:
 
@@ -78,10 +78,10 @@ We welcome contributions! If you have suggestions, bug reports, or want to contr
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## ⭐ Show Your Support
+## Support
 
-Give a ⭐️ if this project helped you!
+If you find this project helpful, please consider giving it a star on GitHub.
