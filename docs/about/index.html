@@ -7,54 +7,78 @@
     <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../tutorials/cursor/">Cursor</a>
-            <a href="../tutorials/chatgpt/">ChatGPT</a>
-            <a href="../tutorials/claude/">Claude</a>
-            <a href="../playground/">Playground</a>
+    <header class="site-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1><a href="../index.html">Learn To Code With AI</a></h1>
+            </div>
+            <div class="main-nav">
+                <a href="../index.html">Home</a>
+                <a href="../tutorials/cursor/">Cursor</a>
+                <a href="../tutorials/chatgpt/">ChatGPT</a>
+                <a href="../tutorials/claude/">Claude</a>
+                <a href="../playground/">Playground</a>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
         </nav>
     </header>
 
-    <main class="about-content">
-        <h1>About Learn To Code With AI</h1>
+    <main class="main-content">
+        <div class="hero">
+            <h2>About Learn To Code With AI</h2>
+            <p>Learn more about our mission and what we offer.</p>
+        </div>
         
-        <section class="about-section">
-            <h2>Our Mission</h2>
-            <p>We're dedicated to helping developers leverage AI tools to enhance their coding journey. Our goal is to make AI-assisted coding accessible to everyone, from beginners to experienced developers.</p>
+        <section class="content-section">
+            <h3>Our Mission</h3>
+            <div class="tutorial-content">
+                <p>We're dedicated to helping developers leverage AI tools to enhance their coding journey. Our goal is to make AI-assisted coding accessible to everyone, from beginners to experienced developers.</p>
+            </div>
         </section>
 
-        <section class="about-section">
-            <h2>What We Offer</h2>
-            <div class="offerings-grid">
-                <div class="offering-card">
-                    <h3>Comprehensive Tutorials</h3>
-                    <p>Step-by-step guides for using AI coding tools effectively.</p>
+        <section class="content-section">
+            <h3>What We Offer</h3>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h4>Comprehensive Tutorials</h4>
+                    <p>Step-by-step guides for using AI coding tools effectively, with clear examples and best practices.</p>
                 </div>
-                <div class="offering-card">
-                    <h3>Interactive Playground</h3>
-                    <p>Try out AI coding tools in real-time.</p>
+                <div class="tool-card">
+                    <h4>Interactive Playground</h4>
+                    <p>Try out AI coding tools in real-time, experiment with different prompts, and see the results instantly.</p>
                 </div>
-                <div class="offering-card">
-                    <h3>Best Practices</h3>
-                    <p>Learn how to use AI tools responsibly and effectively.</p>
+                <div class="tool-card">
+                    <h4>Best Practices</h4>
+                    <p>Learn how to use AI tools responsibly and effectively to enhance your coding skills without becoming dependent.</p>
                 </div>
             </div>
         </section>
 
-        <section class="about-section">
-            <h2>Contact Us</h2>
-            <p>Have questions or suggestions? Reach out to us:</p>
-            <ul>
-                <li>GitHub: <a href="https://github.com/TMHSDigital/Learn_To_Code_With_AI">TMHSDigital/Learn_To_Code_With_AI</a></li>
-                <li>Email: <a href="mailto:contact@tmhsdigital.com">contact@tmhsdigital.com</a></li>
-            </ul>
+        <section class="content-section">
+            <h3>Contact Us</h3>
+            <div class="tutorial-content">
+                <p>Have questions or suggestions? Reach out to us:</p>
+                <ul class="feature-list">
+                    <li>GitHub: <a href="https://github.com/TMHSDigital/Learn_To_Code_With_AI" class="link-highlight">TMHSDigital/Learn_To_Code_With_AI</a></li>
+                    <li>Email: <a href="mailto:contact@tmhsdigital.com" class="link-highlight">contact@tmhsdigital.com</a></li>
+                </ul>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 TMHSDigital. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 TMHSDigital. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/TMHSDigital/Learn_To_Code_With_AI">GitHub</a>
+                <a href="../about/">About</a>
+                <a href="../contact/">Contact</a>
+            </div>
+        </div>
     </footer>
+
+    <script src="../scripts/main.js"></script>
 </body>
 </html> 

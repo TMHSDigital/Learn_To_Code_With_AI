@@ -7,27 +7,38 @@
     <link rel="stylesheet" href="../../styles/main.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="../../index.html">Home</a>
-            <a href="../../tutorials/cursor/">Cursor</a>
-            <a href="../../tutorials/chatgpt/">ChatGPT</a>
-            <a href="../../tutorials/claude/">Claude</a>
-            <a href="../../playground/">Playground</a>
+    <header class="site-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1><a href="../../index.html">Learn To Code With AI</a></h1>
+            </div>
+            <div class="main-nav">
+                <a href="../../index.html">Home</a>
+                <a href="../../tutorials/cursor/">Cursor</a>
+                <a href="../../tutorials/chatgpt/">ChatGPT</a>
+                <a href="../../tutorials/claude/">Claude</a>
+                <a href="../../playground/">Playground</a>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
         </nav>
     </header>
 
-    <main class="tutorial-content">
-        <h1>Intermediate Projects</h1>
-        <p>Explore more complex applications and coding patterns with AI assistance.</p>
+    <main class="main-content">
+        <div class="hero">
+            <h2>Intermediate Projects</h2>
+            <p>Explore more complex applications and coding patterns with AI assistance.</p>
+        </div>
         
-        <section class="tutorial-section">
-            <h2>Todo List Application</h2>
-            <p>Create a functional todo list with AI guidance.</p>
-            
-            <div class="code-example">
-                <h3>HTML Structure</h3>
-                <pre><code>&lt;!-- Ask AI: "Create HTML structure for a todo list app" --&gt;
+        <section class="tutorial-section content-section">
+            <h3>Todo List Application</h3>
+            <div class="tutorial-content">
+                <p>Create a functional todo list with AI guidance.</p>
+                
+                <div class="code-example">
+                    <h4>HTML Structure</h4>
+                    <pre><code>&lt;!-- Ask AI: "Create HTML structure for a todo list app" --&gt;
 &lt;div class="todo-app"&gt;
     &lt;h1&gt;Todo List&lt;/h1&gt;
     &lt;div class="input-container"&gt;
@@ -36,11 +47,11 @@
     &lt;/div&gt;
     &lt;ul id="taskList"&gt;&lt;/ul&gt;
 &lt;/div&gt;</code></pre>
-            </div>
-            
-            <div class="code-example">
-                <h3>JavaScript Implementation</h3>
-                <pre><code>// Ask AI: "Write JavaScript for a todo list that can add, toggle, and delete tasks"
+                </div>
+                
+                <div class="code-example">
+                    <h4>JavaScript Implementation</h4>
+                    <pre><code>// Ask AI: "Write JavaScript for a todo list that can add, toggle, and delete tasks"
 document.addEventListener('DOMContentLoaded', () => {
     const taskInput = document.getElementById('taskInput');
     const addTaskBtn = document.getElementById('addTask');
@@ -119,12 +130,20 @@ document.addEventListener('DOMContentLoaded', () => {
         renderTasks();
     }
 });</code></pre>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 TMHSDigital. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 TMHSDigital. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/TMHSDigital/Learn_To_Code_With_AI">GitHub</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+        </div>
     </footer>
 
     <script src="../../scripts/main.js"></script>

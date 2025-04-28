@@ -5,79 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Learn To Code With AI</title>
     <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .contact-form {
+            max-width: 100%;
+            margin-top: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--card-border);
+            border-radius: 4px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: inherit;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../tutorials/cursor/">Cursor</a>
-            <a href="../tutorials/chatgpt/">ChatGPT</a>
-            <a href="../tutorials/claude/">Claude</a>
-            <a href="../playground/">Playground</a>
+    <header class="site-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1><a href="../index.html">Learn To Code With AI</a></h1>
+            </div>
+            <div class="main-nav">
+                <a href="../index.html">Home</a>
+                <a href="../tutorials/cursor/">Cursor</a>
+                <a href="../tutorials/chatgpt/">ChatGPT</a>
+                <a href="../tutorials/claude/">Claude</a>
+                <a href="../playground/">Playground</a>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
         </nav>
     </header>
 
-    <main class="about-content">
-        <h1>Contact Us</h1>
+    <main class="main-content">
+        <div class="hero">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you!</p>
+        </div>
         
-        <section class="about-section">
-            <h2>Get in Touch</h2>
-            <p>We'd love to hear from you! Whether you have questions, suggestions, or want to contribute to the project, there are several ways to reach us.</p>
+        <section class="content-section">
+            <h3>Get in Touch</h3>
+            <div class="tutorial-content">
+                <p>Whether you have questions, suggestions, or want to contribute to the project, there are several ways to reach us.</p>
+            </div>
         </section>
 
-        <section class="about-section">
-            <h2>Contact Options</h2>
-            <div class="offerings-grid">
-                <div class="offering-card">
-                    <h3>GitHub Issues</h3>
+        <section class="content-section">
+            <h3>Contact Options</h3>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h4>GitHub Issues</h4>
                     <p>For bug reports, feature requests, or other project-related matters, please open an issue on our GitHub repository.</p>
                     <a href="https://github.com/TMHSDigital/Learn_To_Code_With_AI/issues" class="button">Open an Issue</a>
                 </div>
                 
-                <div class="offering-card">
-                    <h3>Email</h3>
+                <div class="tool-card">
+                    <h4>Email</h4>
                     <p>For private inquiries or other matters, you can reach us directly via email.</p>
                     <a href="mailto:contact@tmhsdigital.com" class="button">contact@tmhsdigital.com</a>
                 </div>
                 
-                <div class="offering-card">
-                    <h3>Contribute</h3>
+                <div class="tool-card">
+                    <h4>Contribute</h4>
                     <p>Want to contribute to the project? Check out our contribution guidelines.</p>
                     <a href="https://github.com/TMHSDigital/Learn_To_Code_With_AI/blob/main/CONTRIBUTING.md" class="button">Contribution Guide</a>
                 </div>
             </div>
         </section>
 
-        <section class="about-section">
-            <h2>Send a Message</h2>
-            <form id="contactForm" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                
-                <button type="submit" class="button primary">Send Message</button>
-            </form>
+        <section class="content-section">
+            <h3>Send a Message</h3>
+            <div class="tutorial-content">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="button primary">Send Message</button>
+                </form>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 TMHSDigital. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 TMHSDigital. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/TMHSDigital/Learn_To_Code_With_AI">GitHub</a>
+                <a href="../about/">About</a>
+                <a href="../contact/">Contact</a>
+            </div>
+        </div>
     </footer>
 
     <script src="../scripts/main.js"></script>

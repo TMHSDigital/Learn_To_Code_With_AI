@@ -7,27 +7,38 @@
     <link rel="stylesheet" href="../../styles/main.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="../../index.html">Home</a>
-            <a href="../../tutorials/cursor/">Cursor</a>
-            <a href="../../tutorials/chatgpt/">ChatGPT</a>
-            <a href="../../tutorials/claude/">Claude</a>
-            <a href="../../playground/">Playground</a>
+    <header class="site-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1><a href="../../index.html">Learn To Code With AI</a></h1>
+            </div>
+            <div class="main-nav">
+                <a href="../../index.html">Home</a>
+                <a href="../../tutorials/cursor/">Cursor</a>
+                <a href="../../tutorials/chatgpt/">ChatGPT</a>
+                <a href="../../tutorials/claude/">Claude</a>
+                <a href="../../playground/">Playground</a>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
         </nav>
     </header>
 
-    <main class="tutorial-content">
-        <h1>Advanced Challenges</h1>
-        <p>Master sophisticated coding techniques and system design with AI assistance.</p>
+    <main class="main-content">
+        <div class="hero">
+            <h2>Advanced Challenges</h2>
+            <p>Master sophisticated coding techniques and system design with AI assistance.</p>
+        </div>
         
-        <section class="tutorial-section">
-            <h2>Data Visualization Dashboard</h2>
-            <p>Create a dynamic data visualization dashboard with AI guidance.</p>
-            
-            <div class="code-example">
-                <h3>HTML Structure</h3>
-                <pre><code>&lt;!-- Ask AI: "Create HTML structure for a data visualization dashboard" --&gt;
+        <section class="tutorial-section content-section">
+            <h3>Data Visualization Dashboard</h3>
+            <div class="tutorial-content">
+                <p>Create a dynamic data visualization dashboard with AI guidance.</p>
+                
+                <div class="code-example">
+                    <h4>HTML Structure</h4>
+                    <pre><code>&lt;!-- Ask AI: "Create HTML structure for a data visualization dashboard" --&gt;
 &lt;div class="dashboard"&gt;
     &lt;header class="dashboard-header"&gt;
         &lt;h1&gt;Data Analytics Dashboard&lt;/h1&gt;
@@ -87,11 +98,11 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-            </div>
-            
-            <div class="code-example">
-                <h3>JavaScript Implementation (Partial)</h3>
-                <pre><code>// Ask AI: "Write JavaScript for a data dashboard that fetches and visualizes data"
+                </div>
+                
+                <div class="code-example">
+                    <h4>JavaScript Implementation (Partial)</h4>
+                    <pre><code>// Ask AI: "Write JavaScript for a data dashboard that fetches and visualizes data"
 // Using Chart.js for visualization
 import Chart from 'chart.js/auto';
 
@@ -200,12 +211,20 @@ class Dashboard {
         }
     }
 }</code></pre>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 TMHSDigital. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 TMHSDigital. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/TMHSDigital/Learn_To_Code_With_AI">GitHub</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+        </div>
     </footer>
 
     <script src="../../scripts/main.js"></script>

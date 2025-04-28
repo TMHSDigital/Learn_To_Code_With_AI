@@ -7,44 +7,57 @@
     <link rel="stylesheet" href="../../styles/main.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="../../index.html">Home</a>
-            <a href="../../tutorials/cursor/">Cursor</a>
-            <a href="../../tutorials/chatgpt/">ChatGPT</a>
-            <a href="../../tutorials/claude/">Claude</a>
-            <a href="../../playground/">Playground</a>
+    <header class="site-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1><a href="../../index.html">Learn To Code With AI</a></h1>
+            </div>
+            <div class="main-nav">
+                <a href="../../index.html">Home</a>
+                <a href="../../tutorials/cursor/">Cursor</a>
+                <a href="../../tutorials/chatgpt/">ChatGPT</a>
+                <a href="../../tutorials/claude/">Claude</a>
+                <a href="../../playground/">Playground</a>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
         </nav>
     </header>
 
-    <main class="tutorial-content">
-        <h1>Basic Examples</h1>
-        <p>Start with simple projects to learn the fundamentals of AI-assisted coding.</p>
+    <main class="main-content">
+        <div class="hero">
+            <h2>Basic Examples</h2>
+            <p>Start with simple projects to learn the fundamentals of AI-assisted coding.</p>
+        </div>
         
-        <section class="tutorial-section">
-            <h2>Hello World with AI Assistance</h2>
-            <p>See how AI can help you write even the simplest code more efficiently.</p>
-            
-            <div class="code-example">
-                <h3>JavaScript Hello World</h3>
-                <pre><code>// Ask AI: "Write a hello world function in JavaScript"
+        <section class="tutorial-section content-section">
+            <h3>Hello World with AI Assistance</h3>
+            <div class="tutorial-content">
+                <p>See how AI can help you write even the simplest code more efficiently.</p>
+                
+                <div class="code-example">
+                    <h4>JavaScript Hello World</h4>
+                    <pre><code>// Ask AI: "Write a hello world function in JavaScript"
 function sayHello() {
     console.log("Hello, World!");
 }
 
 // Call the function
 sayHello();</code></pre>
-                <p>AI can help you with proper syntax and best practices, even for simple code.</p>
+                    <p>AI can help you with proper syntax and best practices, even for simple code.</p>
+                </div>
             </div>
         </section>
 
-        <section class="tutorial-section">
-            <h2>Simple Calculator</h2>
-            <p>Create a basic calculator with AI guidance.</p>
-            
-            <div class="code-example">
-                <h3>Calculator Function</h3>
-                <pre><code>// Ask AI: "Write a simple calculator function in JavaScript"
+        <section class="tutorial-section content-section">
+            <h3>Simple Calculator</h3>
+            <div class="tutorial-content">
+                <p>Create a basic calculator with AI guidance.</p>
+                
+                <div class="code-example">
+                    <h4>Calculator Function</h4>
+                    <pre><code>// Ask AI: "Write a simple calculator function in JavaScript"
 function calculate(num1, num2, operation) {
     switch(operation) {
         case 'add':
@@ -68,12 +81,20 @@ console.log(calculate(10, 5, 'add'));      // 15
 console.log(calculate(10, 5, 'subtract')); // 5
 console.log(calculate(10, 5, 'multiply')); // 50
 console.log(calculate(10, 5, 'divide'));   // 2</code></pre>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 TMHSDigital. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 TMHSDigital. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/TMHSDigital/Learn_To_Code_With_AI">GitHub</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+        </div>
     </footer>
 
     <script src="../../scripts/main.js"></script>
